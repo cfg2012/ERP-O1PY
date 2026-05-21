@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
-import MotorBriefs from './modules/marketing/MotorBriefs'
+import MarketingHub from './modules/marketing/MarketingHub'
 
 function ComingSoon({ nombre }) {
   return (
@@ -22,7 +22,7 @@ export default function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Navigate to="/marketing" replace />} />
-          <Route path="/marketing" element={<MotorBriefs />} />
+          <Route path="/marketing" element={<MarketingHub />} />
           <Route path="/comercial" element={<ComingSoon nombre="Comercial" />} />
           <Route path="/operaciones" element={<ComingSoon nombre="Operaciones" />} />
           <Route path="/cobranzas" element={<ComingSoon nombre="Cobranzas" />} />
